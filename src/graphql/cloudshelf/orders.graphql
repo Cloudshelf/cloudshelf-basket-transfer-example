@@ -1,0 +1,36 @@
+query GetOrder($orderId: GlobalId!) {
+  order(id: $orderId) {
+    id
+    thirdPartyId
+    createdAt
+    updatedAt
+    status
+    lines {
+      id
+
+      platformProvidedId
+      platformProvidedProductId
+      platformProvidedProductVariantId
+      productId
+      productName
+      productVariantId
+      productVariantName
+      quantity
+      price
+      currencyCode
+    }
+  }
+}
+
+mutation UpsertOrders($input: [OrderInput!]!) {
+  upsertOrders(input: $input) {
+    orders {
+      id
+      status
+    }
+    userErrors {
+      code
+      message
+    }
+  }
+}

@@ -4,16 +4,29 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "--- codegen ---": "",
+    "graphql:schema:cloudshelf": "graphql-codegen --config src/graphql/cloudshelf/codegen.ts"
   },
   "dependencies": {
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.3"
+    "next": "14.2.3",
+    "graphql": "^15.7.2",
+    "apollo-link-debounce": "^3.0.0",
+    "@apollo/client": "^3.7.15",
+    "dotenv": "^16.4.5",
+    "inversify": "^6.0.1",
+    "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "5.0.0",
+    "@graphql-codegen/introspection": "^4.0.0",
+    "@graphql-codegen/typescript": "4.0.1",
+    "@graphql-codegen/typescript-document-nodes": "^4.0.1",
+    "@graphql-codegen/typescript-operations": "^4.0.1",
+    "@graphql-codegen/typescript-resolvers": "4.0.1",
+    "prettier": "^2.3.2",
+    "@ianvs/prettier-plugin-sort-imports": "^4.2.1",
     "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
